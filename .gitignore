@@ -1,0 +1,10 @@
+.jekyll-cache
+_site
+_tmp
+vendor
+.jekyll-metadata
+
+# Encryption files and folders
+_private
+.masterpassword
+spec/actual

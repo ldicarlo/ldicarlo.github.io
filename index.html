@@ -1,0 +1,23 @@
+---
+layout: default
+title: cards
+---
+
+<h1>cards <span class="text-muted">{{ site.posts.size }}</span></h1>
+
+{% for category in site.categories %}
+<h3>{{ category[0] }} <span class="text-muted">{{ category[1].size }}</span></h3>
+<ul>
+  {% for post in category[1] %}
+  <li>
+    {% if post.draft %}[draft]{% endif %}
+    <a href="{{ post.url }}" class="{% if post.original_content %} encrypted {% endif %}"
+      encryption-key="{{post.path}}">{{
+      post.title }}</a><span class="text-muted"> {{post.date | date_to_string}} -
+      <span class="{% if post.original_content %} encrypted {% endif %}"
+        encryption-key="{{post.path}}">{{post.excerpt}}</span> </span>{% if post.language %}[{{post.language}}]{% endif
+    %}
+  </li>
+  {% endfor %}
+</ul>
+{% endfor %}

@@ -1,0 +1,64 @@
+RubyGems Environment:
+  - RUBYGEMS VERSION: 3.1.2
+  - RUBY VERSION: 2.7.1 (2020-03-31 patchlevel 83) [x86_64-linux-gnu]
+  - INSTALLATION DIRECTORY: /var/lib/gems/2.7.0
+  - USER INSTALLATION DIRECTORY: /home/luca/.gem/ruby/2.7.0
+  - RUBY EXECUTABLE: /usr/bin/ruby2.7
+  - GIT EXECUTABLE: /usr/bin/git
+  - EXECUTABLE DIRECTORY: /usr/local/bin
+  - SPEC CACHE DIRECTORY: /home/luca/.gem/specs
+  - SYSTEM CONFIGURATION DIRECTORY: /etc
+  - RUBYGEMS PLATFORMS:
+    - ruby
+    - x86_64-linux
+  - GEM PATHS:
+     - /var/lib/gems/2.7.0
+     - /home/luca/.gem/ruby/2.7.0
+     - /usr/local/lib/ruby/gems/2.7.0
+     - /usr/lib/ruby/gems/2.7.0
+     - /usr/lib/x86_64-linux-gnu/ruby/gems/2.7.0
+     - /usr/share/rubygems-integration/2.7.0
+     - /usr/share/rubygems-integration/all
+     - /usr/lib/x86_64-linux-gnu/rubygems-integration/2.7.0
+  - GEM CONFIGURATION:
+     - :update_sources => true
+     - :verbose => true
+     - :backtrace => false
+     - :bulk_threshold => 1000
+  - REMOTE SOURCES:
+     - https://rubygems.org/
+  - SHELL PATH:
+     - /home/luca/.nvm/versions/node/v15.0.1/bin
+     - /home/luca/.sdkman/candidates/maven/current/bin
+     - /home/luca/.sdkman/candidates/java/current/bin
+     - /home/luca/.sdkman/candidates/groovy/current/bin
+     - /home/luca/.sdkman/candidates/gradle/current/bin
+     - /usr/local/go/bin
+     - /opt/flutter/bin
+     - /home/luca/bin/lib
+     - /usr/local
+     - /home/luca/.local/bin
+     - /home/luca/.local/bin
+     - /home/luca/bin
+     - /usr/local/sbin
+     - /usr/local/bin
+     - /usr/sbin
+     - /usr/bin
+     - /sbin
+     - /bin
+     - /usr/games
+     - /usr/local/games
+     - /snap/bin
+     - /home/luca/.antigen/bundles/robbyrussell/oh-my-zsh/lib
+     - /home/luca/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/git
+     - /home/luca/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/pip
+     - /home/luca/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/lein
+     - /home/luca/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/command-not-found
+     - /home/luca/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/zsh-navigation-tools
+     - /home/luca/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/colored-man-pages
+     - /home/luca/.antigen/bundles/robbyrussell/oh-my-zsh/plugins/kubectl
+     - /home/luca/.antigen/bundles/zsh-users/zsh-syntax-highlighting
+     - /home/luca/.gem/ruby/2.6.0/bin
+     - /home/luca/.gem/ruby/2.7.0/bin
+     - /home/luca/.local/bin
+     - /usr/local/go/bin

@@ -1,0 +1,16 @@
+---
+layout: page
+title: tags
+---
+
+<ul>
+    {% assign sorted_tags = site.tags | sort %}
+    {% for tag in sorted_tags %}
+    <li>{{tag[0]}} (<a href="tag/{{tag[0] | replace: ' ', '-'}}.html">{{tag[1].size}}</a>)</li>
+    {% endfor %}
+</ul>
+<!-- Technical
+{% for tag in site.tags %}
+%%{{tag[0]}}
+{% endfor %}
+    //-->

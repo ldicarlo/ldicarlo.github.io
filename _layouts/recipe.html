@@ -1,0 +1,18 @@
+---
+layout: zettel
+---
+
+
+
+<h2>ingredients</h2>
+<ul>
+  {% for element in page.ingredients %}
+  <li>{{element.quantity}} {{element.name}}</li>
+  {% endfor %}
+</ul>
+<h2>steps</h2>
+<ul>
+  {% for element in page.steps %}
+  <li>{{element.step}} </li>
+  {% endfor %}
+</ul>

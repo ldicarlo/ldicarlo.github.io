@@ -1,0 +1,79 @@
+---
+layout: default
+---
+
+
+{% assign p = page.url | remove: "/pl/" | remove: ".html" %}
+<div class="row">
+  <div class="col">
+    <div class="card ">
+      <div class="card-header {% if page.draft %} bg-warning {% endif %} font-weight-bold ">
+        {% for t in page.tags %}
+        <a href="/tag/{{t}}.html" class="badge bg-secondary">#{{ t }}</a>
+        {% endfor %}
+      </div>
+      <div class="card-body">
+        <h1 class="card-title {% if page.original_content %} encrypted {% endif %}" encryption-key="{{page.path}}">{{
+          page.title}} </h1>
+        <h5>[<span class="text-muted p-1 {% if page.original_content %} encrypted {% endif %}"
+            encryption-key="{{page.path}}">{{page.excerpt}}</span>]</h5>
+        <h5> {% if page.death %}
+          <em class="text-muted p-1">{{ page.date | date: "%Y-%m-%d" }} - {{page.death | date: "%Y-%m-%d" }}</em>
+          {% endif %}
+        </h5>
+
+        {% if page.parent %}<h6><em class="text-muted">part of <a href="{{page.parent}}">{{page.parent}}</a></em></h6>
+        {% endif %}
+        {% if page.parents %}<h6><em class="text-muted">child of
+            {% for p in page.parents %}
+            <a href="{{p}}">{{p}}</a>
+            {% endfor %}
+          </em></h6>
+        {% endif %}
+        <div class="card-text {% if page.original_content %} encrypted {% endif %}" encryption-key="{{page.path}}">
+          {{content}}
+        </div>
+      </div>
+      <div class="card-footer text-muted {% if page.draft %} bg-warning {% endif %}">
+        {{ page.date | date_to_string }} - {{ content | split: " " | size }}/500 words - {{ page.url }}
+        <div class="row">
+          <div class="col">
+            {% if page.sources.size > 0 %}
+            <ul>
+              {% for t in page.sources %}
+              <li> <a href="{{ t[0] }}" target="_blank">{{t[1]}}</a> </li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <h5>Children</h5>
+    <ul class="list-group">
+      {% for post in site.posts %}
+      {% if post.parents contains p %}
+      <li class="list-group-item"><a href="{{post.url}}">{{ post.url | remove: "/pl/" | remove: ".html"}}</a> </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="col">
+    <h5>Related</h5>
+    <ul class="list-group">
+      {% for t in page.related %}
+      <li class="list-group-item"><a href="/pl/{{ t }}.html">{{t}}</a> </li>
+      {% endfor %}
+      {% for post in site.posts %}
+      {% if post.related contains p %}
+      <li class="list-group-item"><a href="{{ post.url}}">{{ post.url | remove: "/pl/" | remove: ".html"}}</a> </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
