@@ -6,9 +6,10 @@ layout: default
 <h1>{{ page.tag }} <span class="text-muted">{{ site.tags[page.tag].size }}</span></h1>
 
 <ul>
-    {% for post in site.tags[page.tag] %}
-    <li>
-        {{ post.date | date: "%Y-%m-%d" }}: <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-    {% endfor %}
+  {% for post in site.tags[page.tag] %}
+  <li>
+    {{ post.date | date: "%Y-%m-%d" }}: <a href="{{ post.url }}"
+      class="{% if page.original_content %} encrypted {% endif %}" encryption-key="{{page.path}}">{{ post.title }}</a>
+  </li>
+  {% endfor %}
 </ul>
