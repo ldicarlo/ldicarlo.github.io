@@ -9,7 +9,7 @@ layout: default
   {% for post in site.tags[page.tag] %}
   <li>
     {{ post.date | date: "%Y-%m-%d" }}: <a href="{{ post.url }}"
-      class="{% if page.original_content %} encrypted {% endif %}" encryption-key="{{page.path}}">{{ post.title }}</a>
+      class="{% if post.original_content %} encrypted {% endif %}" encryption-key="{{post.path}}">{{ post.title }}</a>
   </li>
   {% endfor %}
 </ul>
